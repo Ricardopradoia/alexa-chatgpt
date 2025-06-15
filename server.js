@@ -138,9 +138,9 @@ app.get('/health', (req, res) => {
   res.json({ status: 'OK', timestamp: new Date().toISOString() });
 });
 
-app.listen(port, () => {
+app.listen(port, '0.0.0.0', () => {
   console.log(`🚀 Servidor rodando na porta ${port}`);
-  console.log(`📡 Endpoint da Alexa: http://localhost:${port}/alexa`);
+  console.log(`📡 Endpoint da Alexa: http://0.0.0.0:${port}/alexa`);
 });
 
 // Tratamento de erros não capturados
